@@ -1,0 +1,111 @@
+* { box-sizing: border-box }
+
+body {
+   padding-bottom: 50px;
+   font: normal 18px/24px 'Petit Formal Script', fantasy;
+}
+
+h1 { margin-top: 10px; }
+h2 { margin: 0 0 20px; }
+
+.lovebox {
+   width: 500px;
+   margin: 20px auto;
+   padding: 20px;
+   border-radius: 20px;
+   background-color: rgba(255,0,0,.5);
+   box-shadow: 0 0 10px white;
+   color: #FCBDEA;
+   text-align: center;
+   text-shadow: 1px 1px darkred;
+}
+
+.form { display: flex; }
+
+   .form > * + * { margin-left: 20px; }
+
+   .form input[type="text"] {
+      flex: 1;
+      min-width: 100px;
+      padding: 5px 20px 0;
+      border: 0;
+      border-radius: 20px;
+      background-color: lightpink;
+      box-shadow: 0 0 5px lightpink;
+      color: darkred;
+      font: bold 14px/2 'Petit Formal Script', fantasy;
+   }
+
+   .form button {
+      width: 30px;
+      height: 30px;
+      border: 0;
+      border-radius: 50%;
+      background-color: lightpink;
+      box-shadow: 0 0 5px lightpink;
+      color: darkred;
+      font-size: 16px;
+      line-height: 1;
+      animation: pulse 1s ease infinite alternate;
+   }
+
+   @keyframes pulse {
+      to { transform: scale(1.3); }
+   }
+
+.score {
+   display: block;
+   margin: 0;
+   padding: 20px 0 0;
+   text-shadow: 5px 5px 5px darkred;
+   font-size: 124px;
+   line-height: 1;
+}
+
+.statement {
+   font-size: 24px;
+   margin-bottom: 20px;
+}
+
+.archive-list {
+   display: inline-block;
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   text-align: left;
+   line-height: 2;
+   letter-spacing: 1px;
+}
+
+.archive-list strong { padding: 0 20px; }
+
+.footer {
+   position: fixed;
+   bottom: 0;
+   left: 50%;
+   margin-left: -250px;
+   padding: 10px 20px 5px;
+   font-size: 80%;
+}
+
+   .footer > p {
+      margin: 0;
+      padding: 0;
+   }
+
+.hearty-bg {
+   background:
+      radial-gradient(circle closest-side at 60% 43%, #b03 26%, rgba(187,0,51,0) 27%),
+      radial-gradient(circle closest-side at 40% 43%, #b03 26%, rgba(187,0,51,0) 27%),
+      radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221,51,85,0) 46%),
+      radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221,51,85,0) 46%),
+      radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 31%),
+      radial-gradient(circle closest-side at 60% 43%, #b03 26%, rgba(187,0,51,0) 27%) 50px 50px,
+      radial-gradient(circle closest-side at 40% 43%, #b03 26%, rgba(187,0,51,0) 27%) 50px 50px,
+      radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
+      radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
+      radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 31%) 50px 50px;
+
+   background-color: #b03;
+   background-size: 100px 100px;
+}
