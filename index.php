@@ -56,7 +56,7 @@
 
             $archive = $storage->getArchive();
 
-            if (!$archive->rowCount()) {
+            if (!sizeof($archive)) {
                echo '<p>Derzeit gibt es keine Einträge. Sei der erste!</p>';
             }
             else {

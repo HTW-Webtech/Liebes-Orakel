@@ -34,7 +34,8 @@ class Storage {
      * @return array Liste aus Einträgen mit id, timestamp, name1, name2 und score
      */
    public function getArchive() {
-      return $this->connection->query('SELECT * FROM archiv ORDER BY id DESC LIMIT 0, 5');
+      $statement =  $this->connection->query('SELECT * FROM archiv ORDER BY id DESC LIMIT 0, 5');
+      return $statement->fetchAll();
    }
 
    /**
