@@ -2,8 +2,8 @@
    require 'Person.php';
    require 'Storage.php';
 
-   $name_du = isset($_GET['du']) ? $_GET['du'] : '';
-   $name_schatzi = isset($_GET['schatzi']) ? $_GET['schatzi'] : '';
+   $name_du = isset($_GET['du']) ? filter_var($_GET['du'], FILTER_SANITIZE_STRING) : '';
+   $name_schatzi = isset($_GET['schatzi']) ? filter_var($_GET['schatzi'], FILTER_SANITIZE_STRING) : '';
 ?>
 
 <!DOCTYPE html>
